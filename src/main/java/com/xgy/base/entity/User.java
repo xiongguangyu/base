@@ -44,19 +44,14 @@ public class User extends BaseEntity {
      * 角色: 1-普通用户 2-管理员
      */
     @TableField("role")
-    private Byte role;
+    private Integer role;
 
     /**
      * 状态: 0-禁用 1-启用
      */
     @TableField("status")
-    private Byte status;
+    private Integer status;
 
-    @TableField("create_time")
-    private LocalDateTime createTime;
-
-    @TableField("update_time")
-    private LocalDateTime updateTime;
 
     @TableField("email")
     private String email;

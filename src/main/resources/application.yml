@@ -24,3 +24,13 @@ mybatis-plus:
       id-type: auto
 
 batchSize: 1000
+
+logging:
+  level:
+    root: info
+    com.xgy.base: debug
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/base.log

@@ -3,6 +3,7 @@ package com.xgy.base.controller;
 import com.xgy.base.entity.User;
 import com.xgy.base.service.UserService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/user")
@@ -23,6 +25,7 @@ public class UserController {
 
     @PostMapping
     public boolean create(@RequestBody User user) {
+        log.info("创建用户, name={}", user.getName());
         return this.userService.save(user);
     }
 
